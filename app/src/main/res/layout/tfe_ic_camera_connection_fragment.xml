@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <com.jsn.cropclassification.view.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp" />
+
+    <com.jsn.cropclassification.view.RecognitionScoreView
+    android:id="@+id/results"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp"
+    android:layout_alignParentTop="false"
+    android:layout_alignParentBottom="true"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="@dimen/_50sdp"
+    android:layout_marginRight="@dimen/_50sdp"
+    android:layout_marginBottom="@dimen/_20sdp"
+    android:visibility="visible"/>
+
+    <com.jsn.cropclassification.view.HorizontalStepView
+        android:id="@+id/stepview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp" />
+
+
+
+    <com.jsn.cropclassification.view.OverlayView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"/>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:elevation="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/startCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shutter" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_search" />
+    </FrameLayout>
+
+
+
+    <!--
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/startCapture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_shutter"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_search" />
+
+
+                <ImageView
+                    android:id="@+id/stopCapture"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_stop"
+                    android:tint="@color/teal"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    -->
+
+    <Switch
+        android:id="@+id/switch_icon_tflite"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/back_button_bg"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_15sdp"/>
+
+    <ImageView
+        android:id="@+id/img_flash_light"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:elevation="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:src="@drawable/ic_zap_off"
+        android:background="@drawable/back_button_bg">
+
+    </ImageView>
+
+
+    <ProgressBar
+        android:id="@+id/progress1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/image_close"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/back_button_bg"
+        android:elevation="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_chevronleft"/>
+        <!--android:tint="@color/teal"
+        tools:ignore="UseAppTint"-->
+
+
+   <!-- <ImageView
+        android:id="@+id/img_flash_light"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentRight="true"
+        android:tint="@color/teal"
+        android:elevation="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:src="@drawable/ic_zap_off"
+        android:background="@drawable/back_button_bg"
+        tools:ignore="UseAppTint"
+        android:visibility="visible"/>-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/subtract" />
+
+    <Button
+        android:id="@+id/btShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="ShowList"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/overlay_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

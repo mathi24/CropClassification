@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_250sdp"
+    android:id="@+id/bottom_sheet_layout"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    android:background="@drawable/top_rounded_corner"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_13sdp"/>
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_below="@+id/img_close"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_above="@+id/crop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/crop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/crop_layout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:background="@drawable/bg_btn"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:background="@drawable/bg_btn"
+                android:text="Submit" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.jsn.cropclassification.view.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" />
+
+    <com.jsn.cropclassification.view.RecognitionScoreView
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/startCapture1"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_start_capture"
+                android:tint="@color/teal"
+                android:visibility="visible"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/stopCapture"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_stop"
+                android:tint="@color/teal"
+                android:visibility="gone"
+                tools:ignore="UseAppTint" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_close"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentBottom="true"
+        android:elevation="5dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:padding="10dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="5dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="@color/teal"
+        tools:ignore="UseAppTint">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/img_flash_light"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:tint="@color/teal"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_baseline_flash_off_24"
+        tools:ignore="UseAppTint" />
+
+    <Button
+        android:id="@+id/btShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="ShowList"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/overlay_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:visibility="visible" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CropClassification</string>
+    <string name="configure">Fetching model details.</string>
+
+    <string name="tfe_ic_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="tfe_ic_gpu_quant_error" translation_description="Error regarding GPU support for Quant models[CHAR_LIMIT=60]">GPU does not yet supported quantized models.</string>
+    <string name="key_vin_no">vin_number</string>
+
+
+    <string-array name="crop_labels">
+        <item><FONT COLOR="#2A367B" />Paddy</item>
+        <item><FONT COLOR="#2A367B" />Coconut</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+</resources>
